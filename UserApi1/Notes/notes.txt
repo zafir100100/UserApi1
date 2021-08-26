@@ -1,0 +1,31 @@
+﻿current working: 
+
+scaffold-dbcontext "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=202.84.32.86)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=orclcdb)));Persist Security Info=True;User Id=icab;Password=icab;" Oracle.EntityFrameworkCore
+
+test:
+
+Scaffold-DbContext "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1522))(CONNECT_DATA=(SERVICE_NAME=XEPDB1)));Persist Security Info=True;User Id=projectadmin1;Password=oracle;" Oracle.EntityFrameworkCore -Tables ICAB.COMPANY, ICAB.USERTABLE1 -OutputDir Models -force
+
+notes:
+
+https://docs.microsoft.com/en-us/ef/core/managing-schemas/scaffolding?tabs=vs
+http://go.microsoft.com/fwlink/?LinkId=723263
+
+it uses Microsoft.EntityFrameworkCore.Tools
+
+but for Oracle, It also needs Oracle.EntityFrameworkCore
+
+On another note:
+
+Microsoft.VisualStudio.Web.CodeGeneration.Design
+
+and
+
+Microsoft.EntityFramework.Core.SqlServer
+
+needed for generating controllers
+
+
+for file upload startup.cs and disablerequestlimit added
+
+for exam_reg report , examRgeReport1.cs is added to model
