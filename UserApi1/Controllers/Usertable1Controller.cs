@@ -44,7 +44,7 @@ namespace UserApi1.Controllers
         [HttpPost("IsEmailExists")]
         public async Task<ActionResult> IsExists([FromBody] Input2 input)
         {
-            bool isFound = await _context.Usertable1s.AnyAsync(i => i.UserName == input.Email);
+            bool isFound = await _context.Usertable1s.AnyAsync(i => i.Email == input.Email);
 
             if (isFound == true)
             {
